@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Dashboard Container -->
+    <div class="flex flex-col h-screen">
+
+        <!-- Dashboard Header -->
+        <header class="bg-blue-600 text-white py-4">
+            <div class="container mx-auto text-center">
+                <h1 th:text="'WELCOME '+${Teacher.getName()}" class="text-3xl font-semibold">Dashboard</h1>
+            </div>
+        </header>
+
+        <!-- Dashboard Navigation -->
+        <nav class="bg-gray-900 text-white py-4">
+            <div class="container mx-auto flex flex-col md:flex-row md:justify-center md:space-x-6">
+				
+                <a href="/addstudent" class="hover:underline mb-2 md:mb-0">Add Student</a>
+                <a href="/studentdetails" class="hover:underline mb-2 md:mb-0">View Students</a>
+                <a href="/updatestudent" class="hover:underline mb-2 md:mb-0">Update Students</a>
+                <a href="/addmarkslink" class="hover:underline mb-2 md:mb-0">Add Marks</a>
+            </div>
+        </nav>
+        <H1 th:text="${msg}"></H1>
+        <!-- Dashboard Content -->
+       
+
+    </div>
+</body>
+</html>
