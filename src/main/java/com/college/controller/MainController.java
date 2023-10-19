@@ -54,7 +54,12 @@ public class MainController {
 	}
 	
 	@GetMapping(value="/lecturerlogin")
-	public String lecturerlogin() {
+	public String lecturerlogin(Model model) {
+		if(session.getAttribute("user")!=null)
+		{
+			model.addAttribute("Teacher",session.getAttribute("user"));
+			return "lecturerdashboard";
+		}
 		return "lecturerlogin";
 	}
 	
