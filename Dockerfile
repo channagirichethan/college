@@ -17,10 +17,10 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17-jdk-slim
 
 # Copy the JAR file from the build stage to the final image
-COPY --from=build /app/target/learnsphere-0.0.1-SNAPSHOT.jar /app/learnsphere.jar
+COPY --from=build /app/target/collegemanagement-0.0.1-SNAPSHOT.jar /app/collegemanagement.jar
 
 # Expose the port that your application listens on (if it's 8080)
 EXPOSE 8080
 
 # Specify the command to run your Spring Boot application
-CMD ["java", "-jar", "/app/learnsphere.jar"]
+CMD ["java", "-jar", "/app/collegemanagement.jar"]
