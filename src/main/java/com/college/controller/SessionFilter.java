@@ -30,6 +30,8 @@ public class SessionFilter implements Filter {
         if (session == null || session.getAttribute("user") == null) {
             // Redirect unauthenticated users to the login page, excluding the login page itself
             if (!httpRequest.getRequestURI().endsWith("/kumar/add")&&
+                !httpRequest.getRequestURI().endsWith("/fetchresult")&&
+                !httpRequest.getRequestURI().endsWith("/results")&&
             		!httpRequest.getRequestURI().endsWith("/teacherintodb")&&
             		!httpRequest.getRequestURI().endsWith("/lecturerloginverify")&&
             		!httpRequest.getRequestURI().endsWith("/add")&&
