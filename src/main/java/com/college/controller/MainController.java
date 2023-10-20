@@ -54,7 +54,7 @@ public class MainController {
 	}
 	
 	@GetMapping(value="/lecturerlogin")
-	public String lecturerlogin(Model model) {
+	public String lecturerlogin(Model model,HttpSession session) {
 		if(session.getAttribute("user")!=null)
 		{
 			model.addAttribute("Teacher",session.getAttribute("user"));
